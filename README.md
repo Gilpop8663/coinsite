@@ -25,4 +25,4 @@ const {isloading,data} = useQuery() 를 이용해 data를 얻은 후 data를 가
 
 ## 배포 사이트
 
-https://gilpop8663.github.io/reactPractice/
+https://gilpop8663.github.io/coinsite/
