@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { Helmet } from "react-helmet";
 import {
