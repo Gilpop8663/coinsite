@@ -6,10 +6,10 @@ function Router() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/coins/:coinId">
+        <Route path="/coinsite/coins/:coinId">
           <Coin />
         </Route>
-        <Route path="/">
+        <Route path="/coinsite">
           <Coins />
         </Route>
       </Switch>

@@ -6,11 +6,9 @@ Data Fetching
 Animations
 Typescript
 
-
 React Query
 React Router
 Apex Charts
-
 
 암호화폐 시세 트래커
 이 프로젝트에서는 React Query 를 이용하여 Crypto Price API 의 데이터를 가져오는 것을 배웁니다. 또한 Styled Components 를 이용해 확장 가능한 디자인 시스템 그리고 다크모드 등을 만드는 방법을 배웁니다. 마지막으로 Apex Charts 를 활용하여 암호화폐 시세 변화 데이터를 시각화 하는 방법을 배울 겁니다.

@@ -177,8 +177,8 @@ const Home = styled.div`
 function Coin() {
   const { coinId } = useParams<routeParams>();
   const { state } = useLocation<RouteState>();
-  const priceMatch = useRouteMatch(`/${coinId}/price`);
-  const chartMatch = useRouteMatch(`/${coinId}/chart`);
+  const priceMatch = useRouteMatch(`/coinsite/coins/${coinId}/price`);
+  const chartMatch = useRouteMatch(`/coinsite/coins/${coinId}/chart`);
   const { isLoading: CoinInfoLoading, data: CoinInfoData } =
     useQuery<ICoinInfo>(["coinInfo", coinId], () => fetchCoinInfo(coinId), {
       refetchInterval: 10000,
@@ -225,7 +225,7 @@ function Coin() {
       </Helmet>
       <Header>
         <Home>
-          <Link to="/">Home</Link>
+          <Link to="/coinsite">Home</Link>
         </Home>
         <Title>
           {state?.name
@@ -272,17 +272,17 @@ function Coin() {
           </Article>
           <Tab>
             <Tabs isActive={chartMatch !== null}>
-              <Link to={`/coins/${coinId}/chart`}>Chart</Link>
+              <Link to={`/coinsite/coins/${coinId}/chart`}>Chart</Link>
             </Tabs>
             <Tabs isActive={priceMatch !== null}>
-              <Link to={`/coins/${coinId}/price`}>Price</Link>
+              <Link to={`/coinsite/coins/${coinId}/price`}>Price</Link>
             </Tabs>
           </Tab>
           <Switch>
-            <Route path={`/coins/${coinId}/chart`}>
+            <Route path={`/coinsite/coins/${coinId}/chart`}>
               <Chart coinId={coinId}></Chart>
             </Route>
-            <Route path={`/coins/${coinId}/price`}>
+            <Route path={`/coinsite/coins/${coinId}/price`}>
               <Price coinId={coinId}></Price>
             </Route>
           </Switch>
